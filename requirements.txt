@@ -1,2 +1,3 @@
 git+https://github.com/HCDigitalScholarship/intervals@main
 verovio
+plotly
