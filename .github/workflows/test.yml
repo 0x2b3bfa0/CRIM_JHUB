@@ -4,10 +4,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - run: >
-          pip install
-          git+https://github.com/HCDigitalScholarship/intervals
-          verovio
-          nbmake
-          pytest
+      - uses: actions/setup-python@v4
+        with:
+          python-version: 3.9.7
+          cache: pip
+      - run: pip install --requirements-file requirements.txt
       - run: pytest --nbmake *.ipynb
