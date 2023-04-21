@@ -8,5 +8,6 @@ jobs:
         with:
           python-version: '3.9'
           cache: pip
-      - run: pip install --requirements-file requirements.txt
-      - run: pytest --nbmake *.ipynb
+      - run: pip install -r requirements.txt
+      - run: pip install pytest{-xdist,} nbmake
+      - run: pytest --nbmake -n auto *.ipynb
