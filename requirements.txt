@@ -1,0 +1,4 @@
+git+https://github.com/HCDigitalScholarship/intervals@main
+verovio
+nbmake
+pytest
